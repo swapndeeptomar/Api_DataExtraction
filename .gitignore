@@ -1,0 +1,15 @@
+# Environment secrets
+.env
+
+# Data and Logs
+data/*.csv
+logs/*.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+.venv/
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
