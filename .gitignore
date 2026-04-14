@@ -1,9 +1,9 @@
 # Environment secrets
 .env
 
-# Data and Logs
-data/*.csv
-logs/*.log
+# # Data and Logs
+# data/*.csv
+# logs/*.log
 
 # Python cache
 __pycache__/
