@@ -5,6 +5,7 @@ from client import GitHubClient
 from processor import DataProcessor
 from writer import CSVWriter
 from logger_config import setup_logging
+from database import MySQLWriter
 
 logger = setup_logging()
 
@@ -24,6 +25,7 @@ def run_pipeline(search_query: str = "language:python", max_pages: int = 10):
     client = GitHubClient()
     processor = DataProcessor()
     writer = CSVWriter("data/github_repos.csv")
+    db_writer = MySQLWriter() # Initialize MySQL
     
     start_page = get_last_page()
     
@@ -50,6 +52,7 @@ def run_pipeline(search_query: str = "language:python", max_pages: int = 10):
                 
             clean_data = processor.flatten_repo_data(items)
             writer.write_batch(clean_data)
+            db_writer.load_batch(clean_data) # Load to MySQL
             
             logger.info(f"✅ Saved {len(clean_data)} records from page {current_page}.")
             
