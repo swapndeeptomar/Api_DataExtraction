@@ -30,7 +30,7 @@ class CSVWriter:
                 writer.writerows(data)
                 
         except IOError as e:
-            print(f"❌ File Error: Could not write to {self.file_path}. {e}")
+            print(f" File Error: Could not write to {self.file_path}. {e}")
 
     def clear_file(self):
         """Optionally clear the file before starting a new run."""
@@ -42,4 +42,4 @@ if __name__ == "__main__":
     writer = CSVWriter("data/test_output.csv")
     writer.clear_file()  # Start fresh
     writer.write_batch(test_data)
-    print("✅ Test file 'data/test_output.csv' created successfully.")
+    print(" Test file 'data/test_output.csv' created successfully.")

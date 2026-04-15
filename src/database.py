@@ -33,7 +33,7 @@ class MySQLWriter:
             self.conn = mysql.connector.connect(**self.config)
             self._create_table()
         except mysql.connector.Error as e:
-            logging.error(f"❌ Database Setup Error: {e}")
+            logging.error(f" Database Setup Error: {e}")
 
     def _create_table(self):
         query = """
@@ -70,7 +70,7 @@ class MySQLWriter:
             cursor = self.conn.cursor()
             cursor.executemany(query, data)
             self.conn.commit()
-            logging.info(f"🗄️ Successfully loaded {cursor.rowcount} records to MySQL.")
+            logging.info(f" Successfully loaded {cursor.rowcount} records to MySQL.")
         except mysql.connector.Error as e:
-            logging.error(f"❌ Database Load Error: {e}")
+            logging.error(f" Database Load Error: {e}")
             self.conn.rollback()
