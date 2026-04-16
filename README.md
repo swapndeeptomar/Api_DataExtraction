@@ -53,10 +53,16 @@ pip install -r requirements.txt
 🚀 UsageTo run the full pipeline:
 python src/main.py
 
-```text 
+📊 Data Schema (MySQL)The pipeline automatically creates a repositories table with the following 
+  structure:ColumnTypeDescriptionrepo_idINT (PK)Unique GitHub Repository IDnameVARCHARName of the 
+  repoowner_loginVARCHARUsername of the ownerstarsINTNumber of 
+  stargazerscreated_atDATETIMENormalized creation timestampextracted_atTIMESTAMPAuto-generated 
+  timestamp of extraction
 
-📊 Data Schema (MySQL)The pipeline automatically creates a repositories table with the following structure:ColumnTypeDescriptionrepo_idINT (PK)Unique GitHub Repository IDnameVARCHARName of the repoowner_loginVARCHARUsername of the ownerstarsINTNumber of stargazerscreated_atDATETIMENormalized creation timestampextracted_atTIMESTAMPAuto-generated timestamp of extraction
+🛡️ **Error Handling**
 
-🛡️ Error HandlingRate Limits: The script detects GitHub's 403 Forbidden and logs the reset time.Unicode Errors: Logging is configured with utf-8 to handle emojis and special characters common in repo descriptions.Database Crashes: Implements rollback() on batch failure to ensure data integrity.
+- **Rate Limits:** The script detects GitHub's 403 Forbidden and logs the reset time.  
+- **Unicode Errors:** Logging is configured with utf-8 to handle emojis and special characters.  
+- **Database Crashes:** Implements rollback() on batch failure to ensure data integrity.  
 
 📝 LicenseDistributed under the MIT License. See LICENSE for more information.
