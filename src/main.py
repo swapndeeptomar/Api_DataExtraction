@@ -21,7 +21,7 @@ def save_checkpoint(page):
     with open(CHECKPOINT_FILE, "w") as f:
         f.write(str(page))
 
-def run_pipeline(search_query: str = "language:python", max_pages: int = 10):
+def run_pipeline(search_query: str = "language:python", max_pages: int = 13):
     client = GitHubClient()
     processor = DataProcessor()
     writer = CSVWriter("data/github_repos.csv")

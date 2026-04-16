@@ -33,3 +33,14 @@
 2026-04-15 12:42:58,761 [INFO] 🗄️ Successfully loaded 30 records to MySQL.
 2026-04-15 12:42:58,761 [INFO] ✅ Saved 30 records from page 10.
 2026-04-15 12:43:00,774 [INFO] 🏁 Job Finished.
+2026-04-16 11:15:25,041 [INFO] 🔄 Resuming ETL Pipeline from page 11...
+2026-04-16 11:15:25,043 [INFO] 📦 Extracting Page 11...
+2026-04-16 11:15:27,051 [INFO]  Successfully loaded 30 records to MySQL.
+2026-04-16 11:15:27,051 [INFO] ✅ Saved 30 records from page 11.
+2026-04-16 11:15:29,058 [INFO] 📦 Extracting Page 12...
+2026-04-16 11:15:30,806 [INFO]  Successfully loaded 30 records to MySQL.
+2026-04-16 11:15:30,807 [INFO] ✅ Saved 30 records from page 12.
+2026-04-16 11:15:32,822 [INFO] 📦 Extracting Page 13...
+2026-04-16 11:15:34,760 [INFO]  Successfully loaded 30 records to MySQL.
+2026-04-16 11:15:34,761 [INFO] ✅ Saved 30 records from page 13.
+2026-04-16 11:15:36,767 [INFO] 🏁 Job Finished.
